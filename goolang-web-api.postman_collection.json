@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "e63aa7ba-0fbd-4231-9832-49776bb77be8",
+		"name": "goolang-web-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22748197",
+		"_collection_link": "https://dark-sunset-375479.postman.co/workspace/ScaleTickets-Team~4d7298fc-8a34-40e8-8fb7-89aab4462065/collection/22748197-e63aa7ba-0fbd-4231-9832-49776bb77be8?action=share&source=collection_link&creator=22748197"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"isbn\": \"112233\",\r\n  \"title\": \"New Book\",\r\n  \"author\": {\r\n    \"firstName\": \"Alice\",\r\n    \"lastName\": \"Johnson\"\r\n  },\r\n  \"yearOfPublication\": 2022\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 08:41:04 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "158"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6f9c0d5a-3f41-4300-8c69-308a250397ec\",\n    \"isbn\": \"112233\",\n    \"title\": \"New Book\",\n    \"author\": {\n        \"firstName\": \"Alice\",\n        \"lastName\": \"Johnson\"\n    },\n    \"yearOfPublication\": 2022\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\": \"7\",\r\n    \"title\": \"Test Book\", \r\n    \"author\": {\r\n        \"firstName\": \"Janny\",\r\n        \"lastName\": \"Carslon\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/books/cb467ea6-b705-49db-8063-a0b7ddc23cc7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books",
+								"cb467ea6-b705-49db-8063-a0b7ddc23cc7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"isbn\": \"112233\",\r\n  \"title\": \"Update Book\",\r\n  \"author\": {\r\n    \"firstName\": \"Alice\",\r\n    \"lastName\": \"Johnson\"\r\n  },\r\n  \"yearOfPublication\": 2022\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/books/38c48711-655a-4e37-b3be-e344d948114b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"books",
+										"38c48711-655a-4e37-b3be-e344d948114b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 08:41:21 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"38c48711-655a-4e37-b3be-e344d948114b\",\n    \"isbn\": \"112233\",\n    \"title\": \"Update Book\",\n    \"author\": {\n        \"firstName\": \"Alice\",\n        \"lastName\": \"Johnson\"\n    },\n    \"yearOfPublication\": 2022\n}"
+						}
+					]
+				},
+				{
+					"name": "by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/books/90174198-d85e-4c93-960d-ee5e49abfc70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books",
+								"90174198-d85e-4c93-960d-ee5e49abfc70"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/books/66ee3f81-5020-4c1b-975f-d98fe2f420a5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"books",
+										"66ee3f81-5020-4c1b-975f-d98fe2f420a5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 08:39:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "158"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"66ee3f81-5020-4c1b-975f-d98fe2f420a5\",\n    \"isbn\": \"112233\",\n    \"title\": \"New Book\",\n    \"author\": {\n        \"firstName\": \"Alice\",\n        \"lastName\": \"Johnson\"\n    },\n    \"yearOfPublication\": 2022\n}"
+						}
+					]
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/books/90174198-d85e-4c93-960d-ee5e49abfc70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books",
+								"90174198-d85e-4c93-960d-ee5e49abfc70"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 08:40:09 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "621"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"c1c5bfb4-fe2b-4cfb-928f-d872d18aa20e\",\n        \"isbn\": \"12345\",\n        \"title\": \"Book One\",\n        \"author\": {\n            \"firstName\": \"John\",\n            \"lastName\": \"Doe\"\n        },\n        \"yearOfPublication\": 2001\n    },\n    {\n        \"id\": \"f1d3afbb-141d-4515-8734-805bf1777276\",\n        \"isbn\": \"67890\",\n        \"title\": \"Book Two\",\n        \"author\": {\n            \"firstName\": \"Steve\",\n            \"lastName\": \"Smith\"\n        },\n        \"yearOfPublication\": 2005\n    },\n    {\n        \"id\": \"4a110cbd-e3e2-4768-b399-5b90f97f9d4c\",\n        \"isbn\": \"13579\",\n        \"title\": \"Book Three\",\n        \"author\": {\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\"\n        },\n        \"yearOfPublication\": 2010\n    },\n    {\n        \"id\": \"66ee3f81-5020-4c1b-975f-d98fe2f420a5\",\n        \"isbn\": \"112233\",\n        \"title\": \"New Book\",\n        \"author\": {\n            \"firstName\": \"Alice\",\n            \"lastName\": \"Johnson\"\n        },\n        \"yearOfPublication\": 2022\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/books/90174198-d85e-4c93-960d-ee5e49abfc70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books",
+								"90174198-d85e-4c93-960d-ee5e49abfc70"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete book",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/books/66ee3f81-5020-4c1b-975f-d98fe2f420a5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"books",
+										"66ee3f81-5020-4c1b-975f-d98fe2f420a5"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 08:40:24 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
